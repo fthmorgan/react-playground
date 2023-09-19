@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 function Greeting() {
   return (
     <React.Fragment>
-      <div>
+      <div className="someValue">
         <h2>My First Component</h2>
         <ul>
           <li>
