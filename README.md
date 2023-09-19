@@ -44,7 +44,7 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
   - create index.js inside src
 
-- toggle sidebar CMD + B
+- toggle sidebar Ctrl + B
 - shortcuts settings/keyboard shortcuts
 
 #### First Component
