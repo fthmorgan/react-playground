@@ -19,6 +19,7 @@ import ReactDOM from 'react-dom/client';
 //   return React.createElement('h2', {}, 'hello world');
 // }
 
+// nested component 
 function Greeting() {
   return <div>
     <Person />
