@@ -28,17 +28,18 @@ const BookList = () => {
   );
 };
 
-
 const EventExample = () => {
   const handleFormInput = (e) => {
     console.log(e);
-    console.log('handle form input');
+    console.log(e.target.name);
+    console.log(e.target.value);
   };
   const handleButtonClick = () => {
     alert('button clicked');
   };
   const handleFormSubmission = (e) => {
-    alert('form submitted');
+    e.preventDefault();
+    console.log('form submitted');
   };
   return (
     <section>
@@ -50,13 +51,14 @@ const EventExample = () => {
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }} />
       </form>
+      <button type="submit">submit</button>
       <button onClick={handleButtonClick}>click me</button>
     </section>
   );
 };
 
 const Book = (props) => {
-  console.log(props);
+  // console.log(props);
   const { img, title, author } = props;
   return (
     <article className="book">
