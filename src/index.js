@@ -10,20 +10,18 @@ const BookList = () => {
     <Book />
   </section>
 }
-
+const author = 'Jordan Moore';
 const Book = () => {
-  return <article className="book">
-    <Image />
-    <Title />
-    <Author />
-  </article>
-}
+  const title = 'Build the Life You Want: The Art and Science of Getting';
+  return (
+    <article className="book">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/81+MJor-K6L._AC_UL900_SR900,600_.jpg" alt="Build the Life You Want: The Art and Science of Getting" />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+    </article>
+  );
+};
 
-const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/81+MJor-K6L._AC_UL900_SR900,600_.jpg" alt="Build the Life You Want: The Art and Science of Getting" />
-const Title = () => <h2>Build the Life You Want: The Art and Science of Getting</h2>
-const Author = () => {
-  return <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.5rem' }}>Arthur C. Brooks</h4>;
-}
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<BookList />)
