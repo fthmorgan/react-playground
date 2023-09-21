@@ -17,7 +17,7 @@ const books = [
   },
 ];
 
-const BookList = () => {
+function BookList() {
   return (
     <section className="booklist">
       <EventExample />
@@ -29,30 +29,19 @@ const BookList = () => {
 };
 
 const EventExample = () => {
-  const handleFormInput = (e) => {
-    console.log(e);
-    console.log(e.target.name);
-    console.log(e.target.value);
-  };
-  const handleButtonClick = () => {
-    alert('button clicked');
-  };
-  const handleFormSubmission = (e) => {
-    e.preventDefault();
-    console.log('form submitted');
-  };
+
   return (
     <section>
-      <form onSubmit={handleFormSubmission}>
+      <form>
         <h2>Typical Form</h2>
         <input
           type='text'
           name='example'
-          onChange={handleFormInput}
+          onChange={(e) => console.log(e.target.value)}
           style={{ margin: '1rem 0' }} />
+        <button type="submit" >submit form</button>
       </form>
-      <button type="submit">submit</button>
-      <button onClick={handleButtonClick}>click me</button>
+      <button onClick={() => console.log('click me')} type="button">click me</button>
     </section>
   );
 };
