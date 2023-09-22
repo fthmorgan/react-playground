@@ -18,11 +18,16 @@ const books = [
 ];
 
 function BookList() {
+  const someValue = 'shakeAndBake'
+  const displayValue = () => {
+    console.log(someValue);
+  }
   return (
     <section className="booklist">
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
       })}
+      <SomeComponent someValue={someValue} />
     </section>
   );
 };
